@@ -69,8 +69,6 @@ var studentPoints: [String: [String: [Int]]] = [:]
 
 // Ваш код починається тут
 
-let maxPoints = [5, 8, 12, 12, 12, 12, 12, 12, 15]
-
 studentsGroups.forEach { group, students in
     
     var studentsMarks = [String: [Int]]()
@@ -78,8 +76,8 @@ studentsGroups.forEach { group, students in
     students.forEach { student in
         var marks = [Int]()
         
-        for index in 0..<9 {
-            marks.append(randomValue(maxValue: maxPoints[index]))
+        for index in 0..<points.count {
+            marks.append(randomValue(maxValue: points[index]))
         }
         
         studentsMarks[student] = marks
